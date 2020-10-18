@@ -51,7 +51,7 @@ router.post('/login', (req, res) => {
 
             const validPassword = dbUserData.checkPassword(req.body.password);
             if (!validPassword) {
-                res.status(400).json({ message: 'Incorrect Password'});
+                res.status(400).json({ message: 'Incorrect Password' });
                 return;
             }
 
@@ -62,7 +62,7 @@ router.post('/login', (req, res) => {
 router.put('/:id', (req, res) => {
     User.update(req.body, {
         individualHooks: true,
-        where: { id: req.params.id } 
+        where: { id: req.params.id }
     })
         .then(dbUserData => {
             if (!dbUserData[0]) {
