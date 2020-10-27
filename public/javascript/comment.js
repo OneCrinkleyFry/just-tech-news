@@ -1,5 +1,3 @@
-const { post } = require("../../controllers");
-
 async function commentFormHandler(event) {
     event.preventDefault();
 
