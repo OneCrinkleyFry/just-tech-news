@@ -45,7 +45,6 @@ router.get('/login', (req, res) => {
     res.render('login')
 });
 
-
 //logout button actions
 router.get('/logout', (req, res) => {
     if (req.session.loggedIn) {
